@@ -1,2 +1,4 @@
 from  wer import *
-print(wer('hello world'.split(), 'hell world'.split()))
+res=wer('hello world'.split(), 'hell world'.split())
+print("testing")
+print(res)

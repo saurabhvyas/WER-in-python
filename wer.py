@@ -25,7 +25,7 @@ def wer(r, h):
                 delete = d[i-1][j] + 1
                 d[i][j] = min(substitute, insert, delete)
     result = float(d[len(r)][len(h)]) / len(r) * 100
-    result = str("%.2f" % result) + "%"
+   # result = str("%.2f" % result) + "%"
 
     #find out the manipulation steps
     x = len(r)
@@ -157,7 +157,7 @@ def wer(r, h):
             index = i - count
             print " "*(len(r[index])),
     print
-    print "WER: "+result    
+    return result    
 
 if __name__ == '__main__':
     filename1 = sys.argv[1]
