@@ -54,7 +54,7 @@ def wer(r, h):
     list = list[::-1]
 
     #print the result in aligned way
-    print "REF:",
+  #  print "REF:",
     for i in range(len(list)):
         if list[i] == "i":
             count = 0
@@ -62,7 +62,7 @@ def wer(r, h):
                 if list[j] == "d":
                     count += 1;
             index = i - count
-            print " "*(len(h[index])),
+          #  print " "*(len(h[index])),
         elif list[i] == "s":
             count1 = 0
             for j in range(i):
@@ -74,19 +74,16 @@ def wer(r, h):
                 if list[j] == "d":
                     count2 += 1;
             index2 = i - count2
-            if len(r[index1])<len(h[index2]):
-                print r[index1]+" "*(len(h[index2])-len(r[index1])),
-            else:
-                print r[index1],
+           
         else:
             count = 0
             for j in range(i):
                 if list[j] == "i":
                     count += 1;
             index = i - count
-            print r[index],
-    print
-    print "HYP:",
+           # print r[index],
+   # print
+   # print "HYP:",
     for i in range(len(list)):
         if list[i] == "d":
             count = 0
@@ -94,7 +91,7 @@ def wer(r, h):
                 if list[j] == "i":
                     count += 1;
             index = i - count
-            print " "*(len(r[index])),
+         #   print " "*(len(r[index])),
         elif list[i] == "s":
             count1 = 0
             for j in range(i):
@@ -106,19 +103,16 @@ def wer(r, h):
                 if list[j] == "d":
                     count2 += 1;
             index2 = i - count2
-            if len(r[index1])>len(h[index2]):
-                print h[index2]+" "*(len(r[index1])-len(h[index2])),
-            else:
-                print h[index2],
+            
         else:
             count = 0
             for j in range(i):
                 if list[j] == "d":
                     count += 1;
             index = i - count
-            print h[index],
-    print
-    print "EVA:",
+           # print h[index],
+  #  print
+   # print "EVA:",
     for i in range(len(list)):
         if list[i] == "d":
             count = 0
@@ -126,14 +120,14 @@ def wer(r, h):
                 if list[j] == "i":
                     count += 1;
             index = i - count
-            print "D"+" "*(len(r[index])-1),
+           # print "D"+" "*(len(r[index])-1),
         elif list[i] == "i":
             count = 0
             for j in range(i):
                 if list[j] == "d":
                     count += 1;
             index = i - count
-            print "I"+" "*(len(h[index])-1),
+           # print "I"+" "*(len(h[index])-1),
         elif list[i] == "s":
             count1 = 0
             for j in range(i):
@@ -145,18 +139,15 @@ def wer(r, h):
                 if list[j] == "d":
                     count2 += 1;
             index2 = i - count2
-            if len(r[index1])>len(h[index2]):
-                print "S"+" "*(len(r[index1])-1),
-            else:
-                print "S"+" "*(len(h[index2])-1),
+           
         else:
             count = 0
             for j in range(i):
                 if list[j] == "i":
                     count += 1;
             index = i - count
-            print " "*(len(r[index])),
-    print
+          #  print " "*(len(r[index])),
+   # print
     return result    
 
 if __name__ == '__main__':
